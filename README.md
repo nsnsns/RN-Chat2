@@ -1,5 +1,10 @@
 # RN-Chat2
 
+Before Running this: Create your own Firebase real-time database; and edit src/Backend.js -->> 
+and put your own firebase credentials there or else it wont run. 
+- - - -
+About RN-Chat2:
+
 React Native Chat App that uses Firebase Realtime Database as backend and the react native module "Gifted Chat" for the UI.
 
 Features-->
