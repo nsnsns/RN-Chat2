@@ -1,0 +1,100 @@
+
+---------------------
+Build Environment to make this on MacOS X Catalina:
+
+We are giving a detailed tutorial in hope it can be of help.
+
+For us; it took us days of trial and error till we decided to rewrite original code - and create this code.
+
+It took us time because code for "ChatApp" demo of react native Gifted-Chat was broken and not compiling with latest firebase version.
+
+Adding dependencies was adding more and more errors to the code.
+That's why we have rewritten that code - and added this project of our to GitHub.
+We hope the instructions will be helpful - and if you have any comments; questions; suggestions or bug-reports of problems you faced, please feel free to message or contact us; or to comment here.
+
+----------------------
+(Make Sure you have the below versions of tools present - if you are seeing weeks or months after we have committed, then you may need to down-grade your versions of tools.
+As of 28th October 2020 these are the current versions we used to make the project. 
+----------------------
+ns@Nalins-MacBook-Pro rn-chat2 % react-native --version  
+react-native-cli: 2.0.1
+react-native: 0.63.3
+ns@Nalins-MacBook-Pro rn-chat2 % node --version
+v12.19.0
+ns@Nalins-MacBook-Pro rn-chat2 % yarn --version
+1.22.10
+ns@Nalins-MacBook-Pro rn-chat2 % 
+
+Also, we use the tool "n" to select between node.js versions; and current version of "n" we are using is as below:
+
+ns@Nalins-MacBook-Pro nschat2 % n --version
+6.5.1
+-----------------------
+To Build Release APK
+and Run:
+
+(A) Setup the react-native modules etc
+
+(1) killall -9 nodde
+
+(2) yarn 
+
+(3) yarn install
+
+(4) yarn add react-native             
+
+(5) yarn add babel-preset-react-native      
+
+(5) yarn add  @react-navigation/native@5.7.3
+
+(7) yarn add  @react-navigation/stack@5.9.0 @react-native-community/masked-view@0.1.10 react-native-screens@2.10.1 react-native-safe-area-context@3.1.4 react-native-gesture-handler@1.7.0
+
+(8) (optional step) (firebase is already added as a yarn dependency - and yarn will automatically get and add the needed firebase module for React-Native; however, if an error of firebase not found comes; then give command:
+yarn add firebase
+)
+
+(9) killall -9 node
+
+
+(B) Test by building release APK whether the needed dependencies etc are there or if something is still needed to be added for project to compile.
+You still need to edit src/Backend.js and add your Firebase credentials, including API key and cloud messaging sender-id and real-time database credentials etc for app to run.
+  
+(B) (1) to build release version of apk, for android:
+cd android
+./gradlew assembleRelease
+
+--> if release APK does'nt build - find and fix the errors; check tool versions; add modules of required versions etc.
+
+Step-3:
+
+Edit the file src/Backend.js -- and add your Firebase API Keys and Credentials.
+You will need a firebase account.
+You will also need to create a "Firebase Real-time Database" - and download the "google-services.json" file.
+
+You *DO NOT* need to put google-services.json file into android/app folder; and neither do you need to add google-services as a build dependency.
+For using real-time database-- all credentials can be pasted into src/Backend.js - and the project will build and run and post and retrieve data from the firebase real-time database.
+
+When Editing src/Backend.js ; remember this:
+
+(1) Get "messaging sender id" - from Firebase Console (website) - from the [Project Settings]
+
+(2) Get all other settings (that is: other than the above "cloud messaging sender id"  from the file google-services.json which you will download from firebase website; under the [Project Settings] tab/page.
+
+(3) We have purposely removed our own firebase-account credentials; API key etc-- otherwise our account could be misused.
+You will need to create a firebase account (free) and create your own credentials; API key etc and put them as needed.
+ 
+----------------------
+Step-4
+
+After changing backend.js  in step-3 - try to first build a release build - and then use react-native run-android to run on a device or an emulator.
+If you have setup the environment properly and have added the firebase credentials correctly, you will be able to build the code and the code should correctly run on both emulator and on device.
+
+---------------------
+
+Good Luck - and all the best.
+
+FOr more info, contact me via email: Nalin Savara <nsnsns@darksun.biz>
+
+	
+
+
