@@ -49,13 +49,13 @@ Infact, after committing - we tested - and almost every clone of repository we d
 
 (5) yarn add  @react-navigation/native@5.7.3
 
-(7) yarn add  @react-navigation/stack@5.9.0 @react-native-community/masked-view@0.1.10 react-native-screens@2.10.1 react-native-safe-area-context@3.1.4 react-native-gesture-handler@1.7.0
+(6) yarn add  @react-navigation/stack@5.9.0 @react-native-community/masked-view@0.1.10 react-native-screens@2.10.1 react-native-safe-area-context@3.1.4 react-native-gesture-handler@1.7.0
 
-(8) (optional step) (firebase is already added as a yarn dependency - and yarn will automatically get and add the needed firebase module for React-Native; however, if an error of firebase not found comes; then give command:
+(7) (optional step) (firebase is already added as a yarn dependency - and yarn will automatically get and add the needed firebase module for React-Native; however, if an error of firebase not found comes; then give command:
 yarn add firebase
 )
 
-(9) killall -9 node
+(8) killall -9 node
 
 
 (B) Test by building release APK whether the needed dependencies etc are there or if something is still needed to be added for project to compile.
