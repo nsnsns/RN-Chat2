@@ -39,11 +39,13 @@ and Run:
 
 (2) yarn 
 
-(3) yarn install
+(3) yarn add react-native             
 
-(4) yarn add react-native             
+Most often; just the 2 steps above (2), (3) are good enough. Often even the step (1) is not needed.
 
-(5) yarn add babel-preset-react-native      
+Infact, after committing - we tested - and almost every clone of repository we did on 2 different Apple MacOS X Machines worked just by doing step(2) and step(3) above.
+
+(4) yarn add babel-preset-react-native      
 
 (5) yarn add  @react-navigation/native@5.7.3
 
